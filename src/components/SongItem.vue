@@ -1,13 +1,22 @@
 <template>
     <div class="song-item" v-bind:class="{'is-complete':song.completed}">
-        <p>{{song.title}}</p>
+        <p>
+            <input type="checkbox" v-on:change="markComplete">
+            {{song.title}}
+            <button @click="$emit('del-song', song.id)" class="del">x</button>
+            </p>
     </div>
 </template>
 
 <script>
 export default {
     name: "SongItem",
-    props: ["song"]
+    props: ["song"],
+    methods: {
+        markComplete() {
+            this.song.completed = !this.song.completed;
+        }
+    }
 }
 </script>
 
