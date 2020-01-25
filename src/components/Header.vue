@@ -1,6 +1,11 @@
 <template>
   <header class="header">
-      <h1>SongList</h1>
+    <div class="desc">
+      <h1>Playlist</h1>
+      <p>Your daily update of the most played tracks right now.</p>
+     <p>1 New entry - Last updated: 4 hours ago</p>
+      </div>
+      <img src="../assets/global.png">
       </header>
 </template>
 
@@ -14,12 +19,14 @@ export default {
 .header {
     background: #333;
     color: #fff;
-    text-align: center;
+    text-align: left;
     padding: 10px;
 }
 
-.header a {
-    color: #fff;
-    padding-right: 5px;
+.desc {
+  position: absolute;
+  left: 25%;
+  top: 8%;
 }
+
 </style>
