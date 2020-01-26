@@ -1,4 +1,8 @@
-# songlist
+# Songlist - Playlist met persoonlijke Top 50
+
+## Introduction
+
+![alt text](https://i.imgur.com/M0C0y9z.png)
 
 ## Project setup
 ```
