@@ -2,7 +2,7 @@
     <div class="song-item" v-bind:class="{'is-complete':song.completed}">
         <p>
             {{song.id}}
-           <span class="space">{{song.description}}</span>  <span>{{song.title}}</span>  
+           <span class="space">{{song.description}}</span>  <span>{{song.title}}</span>
             <button @click="$emit('del-song', song.id)" class="del">Play</button>
             </p>
     </div>
@@ -23,7 +23,7 @@ export default {
 <style scoped>
 
 .space {
-    
+
     position: relative;
    left: 47%;
 }
@@ -41,8 +41,6 @@ img {
     padding: 10px;
     border-bottom: 1px grey solid;
     color: white;
-    padding-right: 10px;
-     
 }
 
 .is-complete {

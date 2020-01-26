@@ -32,13 +32,13 @@ export default {
        },
        {
          id: 3,
-         title: "Suicidal - YNW Melly",
+         title: "Lucid dreams - Juice WLRD",
          description: "3:42",
          completed: false
        },
        {
          id: 4,
-         title: "BOP - DaBaby",
+         title: "Do not disturb - Smokepurpp",
          description: "2:39",
          completed: false
        },
@@ -70,12 +70,6 @@ export default {
          id: 9,
          title: "XO Tour Llif3 - Lil uzi vert",
          description: "3:02",
-         completed: false
-       },
-       {
-         id: 10,
-         title: "Lucid dreams - Juice WLRD",
-         description: "3:59",
          completed: false
        }
       ]

@@ -20,7 +20,7 @@ export default {
     background: #333;
     color: #fff;
     text-align: left;
-    padding: 10px;
+    padding: 30px 0px 40px 20px;
 }
 
 .desc {
