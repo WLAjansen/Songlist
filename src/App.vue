@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <AddSong />
     <Songs v-bind:songs="songs" v-on:del-song="deleteSong" />
   </div>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import Header from './components/Header';
 import Songs from './components/Songs';
+import AddSong from './components/AddSong';
 
 export default {
   name: 'app',
   components: {
     Header,
-    Songs
+    Songs,
+    AddSong
   },
   data() {
     return {
@@ -96,5 +99,18 @@ body {
   font-family: Montserrat;
   line-height: 1.4;
   background: #333;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #666;
 }
 </style>
