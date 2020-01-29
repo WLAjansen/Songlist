@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <AddSong />
+    <AddSong v-on:add-song="addSong" />
     <Songs v-bind:songs="songs" v-on:del-song="deleteSong" />
   </div>
 </template>
@@ -81,6 +81,9 @@ export default {
   methods: {
     deleteSong(id) {
       this.songs = this.songs.filter(song => song.id !== id);
+    },
+    addSong(newSong) {
+      this.songs = [...this.songs,newSong];
     }
   }
 }

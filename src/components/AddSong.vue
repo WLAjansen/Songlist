@@ -1,14 +1,14 @@
 <template>
     <div>
-        <form @submit="AddSong">
+        <form @submit="addSong">
             <input type="text" v-model="title" name="title" placeholder="Add Song">
-            <input type="submit" value="submit" class="btn">
+            <input type="submit" value="Submit" class="btn">
             </form>
         </div>
 </template>
 
 <script>
-import uuid from "uuid";
+import uuid from 'uuid';
 export default {
     name: "AddSong",
     data() {
@@ -17,12 +17,17 @@ export default {
         }
     },
     methods: {
-        AddSong() {
+        addSong(e) {
+            e.preventDefault();
             const newSong = {
                 id: uuid.v4(),
                 title: this.title,
                 completed: false
             }
+            // Send up to parent 
+            this.$emit('add-song', newSong);
+
+            this.title = '';
         }
     }
 }
